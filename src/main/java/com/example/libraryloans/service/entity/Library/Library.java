@@ -55,7 +55,7 @@ public class Library {
 	}
 
 	private Catalog getAvailableCatalog(Material material){
-		return catalog.stream().filter(catalog1 -> catalog1.getMaterial().getTitle().equals(material.getTitle()))
+		return catalog.stream().filter(existingCatalog -> existingCatalog.getMaterial().getTitle().equals(material.getTitle()))
 				.findAny().get();
 	}
 
